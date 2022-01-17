@@ -23,3 +23,20 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+//! ***************************************************************
+//! npm install --save-dev cypress@9.2.0
+
+// Cypress.Commands.add() -> komut ekle, tanimla
+
+// /automationpractice.com -1 giris icin tanimlandi
+Cypress.Commands.add('login', (email, password) => {
+
+    cy.visit('http://automationpractice.com/index.php')
+    cy.get('.login').click()
+    cy.get('#email').type(email)
+    cy.get('#passwd').type(password)
+    cy.get('#SubmitLogin > span').click()
+
+
+})
