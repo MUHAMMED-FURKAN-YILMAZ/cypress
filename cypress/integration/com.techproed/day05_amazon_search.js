@@ -1,12 +1,13 @@
 describe("amazon search", () => {
 
   it("search", () => {
-    cy.visit("https://www.amazon.com/");
 
-    cy.get('#twotabsearchtextbox').type('imac')
-    cy.get('#nav-search-submit-button').click()
+    cy.uncaught();
+    cy.amazonSearch("imac");
 
-
+    cy.get('.a-color-state').should('have.text', '"imac"')
+    cy.get('.a-color-state').should('include.text', 'imac')
+    cy.get('.a-color-state').should('contains.text', 'imac')
 
   });
 });
