@@ -1,15 +1,19 @@
 {
-    "chromeWebSecurity": false,
-    "projectId": "auv5jm",
-    "reporter": "mochawesome",
-    "reporterOptions": {
-      "reportDir": "cypress/reports",
-      "reportFilename": "report",
-      "overwrite": false,
-      "html": true,
-      "json": true,
-      "charts": true
-    },
-    "video": false
-   
+  "watchForFileChanges": false,
+  "chromeWebSecurity": false,
+  "projectId": "auv5jm",
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/reports",
+    "reportFilename": "report",
+    "overwrite": false,
+    "html": true,
+    "json": true,
+    "charts": true
+  },
+  "video": false,
+  "retries": {
+    "runMode": 1,
+    "openMode": 0
+  }
 }
